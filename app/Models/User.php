@@ -16,7 +16,12 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return str_ends_with($this->email, 'admin@gmail.com') && $this->hasVerifiedEmail();
+        if (app()->environment('development')) {
+            return str_ends_with($this->email, 'admin@gmail.com') && $this->hasVerifiedEmail();
+        }
+    
+        // Izinkan akses di lingkungan lokal
+        return true;
     }
     /**
      * The attributes that are mass assignable.

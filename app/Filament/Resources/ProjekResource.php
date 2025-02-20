@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Projek;
+use App\Models\projek;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -17,7 +17,7 @@ use App\Filament\Resources\ProjekResource\RelationManagers;
 
 class ProjekResource extends Resource
 {
-    protected static ?string $model = Projek::class;
+    protected static ?string $model = projek::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
