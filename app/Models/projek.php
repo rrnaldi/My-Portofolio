@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class projek extends Model
+class Projek extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'imgprojek', 'deskripsi'];

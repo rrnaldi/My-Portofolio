@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class section extends Model
+class Section extends Model
 {
     use HasFactory;
     protected $fillable = ['image', 'name', 'skill', 'about', 'post_as'];
