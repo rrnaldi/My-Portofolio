@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\SectionResource\Pages;
 
 use App\Filament\Resources\SectionResource;
-use App\Models\section;
+use App\Models\Section;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +16,7 @@ class EditSection extends EditRecord
     {
         return [
             Actions\DeleteAction::make()->after(
-                function(section  $record){
+                function(Section  $record){
                     if($record->image)
                     Storage::disk('public')->delete($record->image);
                 }
